@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.eclipse.ui"
+            class="uescape.view.UnicodeEscapeView"
+            icon="icons/unicode.png"
+            id="uescape.view.UnicodeEscapeView"
+            name="unicodeEscape">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.4"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="bottom"
+               id="uescape.view.UnicodeEscapeView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>
